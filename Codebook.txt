@@ -1,0 +1,32 @@
+# Code book
+
+1. Load and unzip the dataset: No variables used here
+
+2. Reading activity and features data
+•	activityLabels: stores activity labels data
+•	features: stores features data
+
+3. Extract only mean and standard deviation from features data
+•	Featuresreq: stores all the feature index with mean and std dev in their associated names
+•	featuresreq.names : stores all the feature names with mean and std dev in names
+
+4. Load the training datasets
+•	train: stores X_train.txt data
+•	trainActivities:  stores Y_train.txt data
+•	trainSubjects: stores subject_train data
+•	train: Column binds train, trainActivities and trainSubjects
+
+5. Load the test data sets
+•	test: stores X_test.txt data
+•	testActivities:  stores Y_test.txt data
+•	testSubjects: stores subject_test data
+•	test: Column binds test, testActivities and testSubjects
+
+ 6. Merge and add labels data 
+•	consol_data: row binds train and test data
+
+7. Fetching activity description from activity labels and ordering columns
+•	consol_data_left: Left joined table with activity label to fetch activity description
+
+8. Create independent tidy data set
+•	consol_data_group: stores grouped data by subject and activity description and summarizes and calculates mean for other columns
